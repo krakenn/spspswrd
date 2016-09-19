@@ -1,0 +1,63 @@
+FUNCTION_BLOCK keypad
+VAR_INPUT
+	en : BOOL;
+	byteKeypadButtons : BYTE;
+
+END_VAR
+VAR_OUTPUT
+	
+	eno : BOOL;
+	strKeyPressed : STRING;
+	boolButtonPressed : BOOL;
+
+END_VAR
+VAR
+
+
+END_VAR
+
+//main
+
+boolButtonPressed := FALSE;
+strKeyPressed := '';
+
+IF byteKeypadButtons = 1 THEN 
+	boolButtonPressed := TRUE;
+	strKeyPressed := '1';
+END_IF;
+
+IF byteKeypadButtons = 2 THEN 
+	boolButtonPressed := TRUE;
+	strKeyPressed := '2';
+END_IF;
+
+IF byteKeypadButtons = 4 THEN 
+	boolButtonPressed := TRUE;
+	strKeyPressed := '3';
+END_IF;
+
+IF byteKeypadButtons = 8 THEN 
+	boolButtonPressed := TRUE;
+	strKeyPressed := '4';
+END_IF;
+
+IF byteKeypadButtons = 16 THEN 
+	boolButtonPressed := TRUE;
+	strKeyPressed := '5';
+END_IF;
+
+IF byteKeypadButtons = 32 THEN 
+	boolButtonPressed := TRUE;
+	strKeyPressed := '6';
+END_IF;
+
+IF byteKeypadButtons = 64 THEN 
+	boolButtonPressed := TRUE;
+	strKeyPressed := '7';
+END_IF;
+
+IF byteKeypadButtons = 128 THEN 
+	boolButtonPressed := TRUE;
+	strKeyPressed := '8';
+END_IF;
+
